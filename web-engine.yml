@@ -1,0 +1,16 @@
+version: '3'
+services:
+  db:
+    container_name: web-engine
+    image: postgres:10
+    environment:
+      - POSTGRES_DB=eshop_docker
+      - POSTGRES_PASSWORD=eshop
+      - POSTGRES_USER=eshop
+    volumes:
+      - ./db-data:/var/lib/postgresql/
+    ports:
+          - "5431:5432"
+volumes:
+  db-data:
+    driver: local
