@@ -76,11 +76,12 @@ WSGI_APPLICATION = 'e_shop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'eshop_docker',
         'PASSWORD': 'eshop',
-        'USERNAME': 'eshop',
-        'PORT': '5431'
+        'USER': 'eshop',
+        'HOST': 'localhost',
+        'PORT': '5431',
     }
 }
 
@@ -121,4 +122,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = 'main/static/'
+STATIC_URL = '/main/static/'
