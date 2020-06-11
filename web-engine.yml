@@ -1,7 +1,7 @@
 version: '3'
 services:
   db:
-    container_name: web-engine
+    container_name: eshop-web-engine
     image: postgres:10
     environment:
       - POSTGRES_DB=eshop_docker
